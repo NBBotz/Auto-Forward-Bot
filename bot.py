@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 def ping_loop():
     while True:
         try:
-            with urllib.request.urlopen(URL, timeout=10) as response:
+            with urllib.request.urlopen(APP_URL, timeout=10) as response:
                 if response.status == 200:
                     logger.info("✅ Ping Successful")
                 else:
